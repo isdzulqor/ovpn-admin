@@ -31,6 +31,8 @@ services:
       EASYRSA_PATH: "/mnt/easyrsa"
       OVPN_SERVER: "127.0.0.1:7777:udp"
       OVPN_INDEX_PATH: "/mnt/easyrsa/pki/index.txt"
+      OVPN_MASTER_USER: "master"
+      OVPN_MASTER_PASSWORD: "password"
     network_mode: service:openvpn
     volumes:
       - ./easyrsa_master:/mnt/easyrsa
